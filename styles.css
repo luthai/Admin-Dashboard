@@ -17,7 +17,7 @@
     background-color: #2196F3;
 }
 
-.grid {
+.layout {
     border: 1px solid black;
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
@@ -29,10 +29,111 @@
     grid-area: nav;
 }
 
+.nav-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+        'nav-dashboard'
+        'nav-menu'
+        'nav-menu'
+        'nav-settings'
+        'nav-settings';
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.dashboard {
+    grid-area: nav-dashboard;
+}
+
+.menu {
+    grid-area: nav-menu;
+}
+
+.settings {
+    grid-area: nav-settings;
+}
+
 .header {
     grid-area: header;
 }
 
+.header-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        'search-bar search-bar search-bar user-id user-id'
+        'user-info user-info user-info task-buttons task-buttons';
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.search-bar {
+    grid-area: search-bar;
+}
+
+.user-id-bar {
+    grid-area: user-id;
+}
+
+.user-info-bar {
+    grid-area: user-info;
+}
+
+.task-buttons {
+    grid-area: task-buttons;
+}
+
 .main {
     grid-area: main;
+}
+
+.main-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        'left left right'
+        'left left right'
+        'left left right';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.main-left {
+    grid-area: left;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        'projects projects'
+        'projects projects'
+        'projects projects';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.main-right {
+    grid-area: right;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        'announcements'
+        'trending';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
