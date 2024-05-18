@@ -84,7 +84,6 @@
 .dashboard h1 {
     position: relative;
     font-size: 30px;
-    
     align-items: center;
     color: #fff;
 }
@@ -99,6 +98,9 @@
 
 .header {
     grid-area: header;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-right: 50px;
 }
 
 .header-container {
@@ -112,20 +114,68 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
-.search-bar {
+.search-bar{
     grid-area: search-bar;
+    display: flex;
+    align-items: center;
+    & img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+    & input {
+        width: 70%;
+        height: 45px;
+        border-radius: 50px;
+        background-color: #e1e7ed;
+        border: 0px;
+    }
 }
 
 .user-id-bar {
     grid-area: user-id;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    & .icon-bell {
+        width: 40px;
+        height: 40px;
+        margin-right: 25px;
+    }
+    & .logo-odin {
+        width: 60px;
+        height: 60px;
+        margin-right: 25px;
+    }
 }
 
 .user-info-bar {
     grid-area: user-info;
+    display: flex;
+    align-items: center;
+    & img {
+        width: 90px;
+        height: 90px;
+        margin-right: 25px;
+    }
 }
 
 .task-buttons {
     grid-area: task-buttons;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    & button {
+        width: 140px;
+        height: 50px;
+        border: 0;
+        border-radius: 30px;
+        background-color: #1c93d3;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
 }
 
 .main {
