@@ -7,18 +7,16 @@
 .container {
     display: grid;
     width: 100%;
-    height: 100vh;
     grid-template-areas: 
         'nav header header header'
         'nav main main main'
         'nav main main main'
+        'nav main main main'
+        'nav main main main'
+        'nav main main main'
         'nav main main main';
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-
-.layout {
-    border: 1px solid black;
+    grid-template-rows: repeat(7, 1fr);
 }
 
 .nav {
@@ -35,8 +33,10 @@
         'nav-menu'
         'nav-menu'
         'nav-settings'
+        'nav-settings'
+        'nav-settings'
         'nav-settings';
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     background-color: #1c93d3;
 }
 
@@ -192,23 +192,55 @@
         'left left right';
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    background-color: #e1e7ed;
 }
 
 .main-left {
     grid-area: left;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-        'projects projects'
-        'projects projects'
-        'projects projects';
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 30px;
+    & h1 {
+        padding-bottom: 15px;
+    }
 }
 
 .projects {
-    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px
+}
+
+.card {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 15px;
+    background-color: #fff;
+    border-left: 10px solid;
+    border-radius: 8px;
+    border-left-color: #e2b231;
+    & h2 {
+        font-size: larger;
+    }
+    & p {
+        font-size: 16px;
+        color: #000;
+        opacity: 70%;
+        margin-bottom: 40px;
+        text-wrap: balance;
+    }
+}
+
+.card-icons {
+    text-align: end;
+    & img {
+        width: 40px;
+        height: 40px;
+        padding-left: 10px;
+    }
 }
 
 .main-right {
