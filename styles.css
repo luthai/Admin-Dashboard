@@ -255,10 +255,46 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
-.announcements {
+.announcements-container {
     grid-area: announcements;
+    padding-top: 40px;
+    padding-left: 30px;
+    & h1 {
+        padding-bottom: 15px;
+    }
 }
 
-.trending {
+.announcements {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+}
+
+.post {
+    & h4 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    & p {
+        padding-bottom: 10px;
+        text-wrap: balance;
+        color: #000;
+        opacity: 70%;
+    }
+}
+
+hr.dotted {
+    border-top: 2px solid #bbb;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    color: #000;
+    opacity: 70%;
+}
+
+.trending-container {
     grid-area: trending;
 }
